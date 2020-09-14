@@ -16,11 +16,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="facebookScraper", 
+    name="FBAdLibrarian", 
     version="0.1.4",
     author="Rasmus H. Schmøkel",
     author_email="rasmusschmokel@gmail.com",
-    description="A python module for scraping facebook",
+    description="A helpful librarian for the Facebook AdLibrary",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
