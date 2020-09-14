@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-/facebookScraper/to_be_deleted
+/FBAdLibrarian/to_be_deleted
 facebookAccessTokenLocalCopy.txt
 
 # C extensions
