@@ -1,0 +1,8 @@
+click
+pandas
+datetime
+Pillow
+requests
+selenium
+chromedriver_autoinstaller
+xlrd

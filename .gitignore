@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+/facebookScraper/to_be_deleted
+facebookAccessTokenLocalCopy.txt
+
 # C extensions
 *.so
 
@@ -10,7 +13,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+#dist/
 downloads/
 eggs/
 .eggs/
