@@ -7,13 +7,14 @@ __pycache__/
 facebookAccessTokenLocalCopy.txt
 *.vscode
 FBAdLibrarian/.vscode
+*.DS_Store
 
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
-#build/
+build/
 develop-eggs/
 #dist/
 downloads/
