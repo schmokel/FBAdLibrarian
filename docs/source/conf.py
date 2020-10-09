@@ -35,7 +35,7 @@ release = '0.1.4'
 # ones.
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode",
             "sphinx.ext.intersphinx", "sphinx.ext.ifconfig",
-            "sphinx.ext.napoleon", "recommonmark"
+            "sphinx.ext.napoleon", "recommonmark", 'sphinx_markdown_builder'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -44,7 +44,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-#exclude_patterns = ['build/*']
+exclude_patterns = ['build/*']
 
 
 # -- Options for HTML output -------------------------------------------------
