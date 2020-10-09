@@ -5,6 +5,8 @@ __pycache__/
 
 /FBAdLibrarian/to_be_deleted
 facebookAccessTokenLocalCopy.txt
+*.vscode
+FBAdLibrarian/.vscode
 
 # C extensions
 *.so

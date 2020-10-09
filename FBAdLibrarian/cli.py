@@ -10,7 +10,7 @@ from datetime import datetime
 import os
 import re
 import facebookScraper.scraper as sp
-from colorama import Fore, Back, Style
+#from colorama import Fore, Back, Style
 
 
 @click.group()

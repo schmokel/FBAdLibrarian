@@ -4,8 +4,7 @@ Created on Thu Apr 16 14:39:13 2020
 
 @author: rhs
 """
-#https://packaging.python.org/tutorials/packaging-projects/
-#https://packaging.python.org/guides/distributing-packages-using-setuptools/#package-data
+
 
 import setuptools
 
@@ -18,7 +17,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="FBAdLibrarian", 
     version="0.1.4",
-    author="Rasmus H. Schmøkel",
+    author="Rasmus Schmøkel",
     author_email="rasmusschmokel@gmail.com",
     description="A helpful librarian for the Facebook AdLibrary",
     long_description=long_description,
@@ -34,7 +33,7 @@ setuptools.setup(
     python_requires='==3.7.*',
     entry_points={
         "console_scripts": [
-            "facebookScraper = facebookScraper.cli:main"
+            "FBAL = FBAdLibrarian.cli:main"
         ]
     }
 )
