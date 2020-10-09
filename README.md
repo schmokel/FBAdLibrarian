@@ -6,7 +6,7 @@
 
 ## Usage
 
-For futher help see the [documentation](docs/build/html/index.html)
+For futher help see the [documentation](docs/build/html/index.html){:target="_blank"}
 
 
 ## Contributing
