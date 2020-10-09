@@ -6,10 +6,12 @@
 
 ## Usage
 
+For futher help see the [documentation] (docs/build/html/index.html)
 
-## Constributing
 
-For futher help see the [documentation] (/docs/build/html/index.html)
+## Contributing
+
+
 ## License
 
 Be sure that the Credentials.yaml is updated with a working access token (keep it in the root-folder /AdsProject)
