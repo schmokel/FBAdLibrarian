@@ -1,7 +1,6 @@
 # FBAdLibrarin - a helpful librarian for Facebook Ad Library
 Desciprtion of the package
 
-## Getting started
 
 
 ## Prerequisites
