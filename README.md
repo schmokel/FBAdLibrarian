@@ -39,7 +39,7 @@ cd "[your individual folder structure]/testproject"
 
 First, initialiaze the project. This command will setup the librarians environment with necessary folders and files
 ```bash
-FBAL init "path-to-csv-file-from-fb-ad-library"
+FBAL init "name-and-path-to-csv-file-from-fb-ad-library"
 ```
 The FbAdLibrarian have created the necessary files and folder. 
 In the credentials-files insert your Facebook Ad Library token.
