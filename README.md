@@ -60,6 +60,6 @@ For futher help see the [documentation](docs/build/html/index.html)
 
 
 ## License
-FBAdLibrarian is licensed under the GNU General Public License v3.0
+FBAdLibrarian is published under the GNU General Public License v3.0
 Read the license [here](LICENSE)
 
