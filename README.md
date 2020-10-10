@@ -6,7 +6,8 @@ Desciprtion of the package
 ## Prerequisites
 * Python 3 (Is tested on 3.7 but might work on other versions)
 * Access to Facebook Ad Library 
-* Output data from Facebook Ad Library in csv format with semi-colon seperator (other formats and seperators are not supported as of now)
+* Output data from Facebook Ad Library in csv format with semi-colon seperator (other formats and seperators are not supported as of now)  
+
 
 ## Installation
 In order to install the FbAdLibrarin you can either build from source or install via pip from the wheel distributable
@@ -24,7 +25,8 @@ Building from source:
 python setup.py install 
 ```
 
-You have now installed the FBAdLibrarian
+You have now installed the FBAdLibrarian  
+
 
 ## Usage
 
@@ -54,7 +56,9 @@ The program is now running and you should see the fetched images in the output-f
 If the librarian stops for whatever reason, fix the issue (e.g. if your token is expired) and simply type the 'FBAL start'-command again and the librarian will restart where it left off.
 
 
-For futher help see the [documentation](docs/build/html/index.html)
+For futher help see the [documentation](docs/build/html/index.html)  
+
+
 
 ## Contributing
 Please refer to the project's style for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
@@ -63,7 +67,8 @@ Please refer to the project's style for submitting patches and additions. In gen
 2. Clone the project to your own machine
 3. Commit changes to your own branch
 4. Push your work back up to your fork
-5. Submit a Pull request so that we can review your changes
+5. Submit a Pull request so that we can review your changes  
+
 
 
 ## License
