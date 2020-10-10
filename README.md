@@ -5,7 +5,8 @@ Desciprtion of the package
 
 ## Prerequisites
 * Python 3 (Is tested on 3.7 but might work on other versions)
-* Data from Facebook Ad Library in csv format with semi-colon seperation (other formats and seperators are not supported as of now)
+* Access to Facebook Ad Library 
+* Output data from Facebook Ad Library in csv format with semi-colon seperator (other formats and seperators are not supported as of now)
 
 ## Installation
 In order to install the FbAdLibrarin you can either build from source or install via pip from the wheel distributable
