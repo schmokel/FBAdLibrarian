@@ -31,27 +31,27 @@ You have now installed the FBAdLibrarian
 FBAdLibrarian is a CLi (Command line tool). You use the tool with the terminal/cmd.
 
 Start a new project-folder for your data.
-Assuming your project folder is called 'testproject', navigate to the project-folder.
+Assuming your project folder is called 'FBALproject', navigate to the project-folder.  
 In terminal/cmd:
 ```bash
-cd "[your individual folder structure]/testproject"
+cd "[your individual folder structure]/FBALproject"
 ```
 
 First, initialiaze the project. This command will setup the librarians environment with necessary folders and files
 ```bash
 FBAL init "name-and-path-to-csv-file-from-fb-ad-library"
 ```
-The FbAdLibrarian have created the necessary files and folder. 
-In the credentials-files insert your Facebook Ad Library token.
+The FbAdLibrarian are creating the necessary files and folder. 
+In the credentials-file insert your Facebook Ad Library token.
 You are now all set to fetch images.
 
-Now, simply start the librarian
+Now, still in the project folder simply start the librarian
 ```bash
 FBAL start 
 ```
-The program is now running and you should see the fetched images in the output-folder.
-If the librarian stops for whatever reason, fix the issue (e.g. if your token is expired) and simply type the 'FBAL start'-command again and the librarian will restart where it left off.
+The program is now running and you should see the fetched images in the output-folder.  
 
+If the librarian stops for whatever reason, fix the issue (e.g. if your token is expired) and simply type the 'FBAL start'-command again and the librarian will restart where it left off.
 
 
 For futher help see the [documentation](docs/build/html/index.html)
