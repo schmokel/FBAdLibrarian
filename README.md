@@ -13,18 +13,18 @@ In order to install the FbAdLibrarin you can either build from source or install
 
 In terminal/CMD:
 
-Install from the wheel-file
+Installing from  wheel-file
 ```bash
 pip install "dist/FBAdLibrarian-0.1.4-py3-none-any.whl"
 ```
 
-or build from source:
+Building from source:
 
 ```bash
 python setup.py install 
 ```
 
-You have now install the FBAdLibrarian in your python environment.
+You have now installed the FBAdLibrarian
 
 ## Usage
 
