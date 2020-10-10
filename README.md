@@ -1,4 +1,4 @@
-# FBAdLibrarian # ### a helpful librarian for Facebook Ad Library ###
+# FBAdLibrarian - a helpful librarian for Facebook Ad Library 
 Desciprtion of the package
 
 
