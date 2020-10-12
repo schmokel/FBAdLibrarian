@@ -16,10 +16,6 @@ FBAdLibrarian.scraper module
 
 FBAdLibrarian.cli module
 ----------------------------
-.. click:: FBAdLibrarian.cli
+.. click:: FBAdLibrarian.cli:main
    :prog: fbal
-   :show-nested:
-
-.. click:: module:parser
-   :prog: hello-world
-   :show-nested:
+   :nested: full

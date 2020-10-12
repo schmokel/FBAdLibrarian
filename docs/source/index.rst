@@ -15,8 +15,6 @@ Welcome to FBAdLibrarian's documentation!
 
 
 
-
-
 Indices and tables
 ==================
 

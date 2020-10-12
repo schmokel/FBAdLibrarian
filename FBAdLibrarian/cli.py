@@ -15,12 +15,14 @@ import FBAdLibrarian.scraper as sp
 
 @click.group()
 def main():
+    """A sample main documentation."""
     pass
    
 
 @main.command()
 @click.argument('datafile')
 def init(datafile):
+    """A sample init documentation."""
     #creating project structure
     folders = ['temp', 'output']
     
@@ -80,6 +82,7 @@ def init(datafile):
 
 @main.command()
 def start():
+    """A sample start documentation."""
     folder = 'temp/'
     files = os.listdir(folder)
 
