@@ -16,8 +16,10 @@ FBAdLibrarian.scraper module
 
 FBAdLibrarian.cli module
 ----------------------------
-.. automodule:: FBAdLibrarian.cli
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    :inherited-members:
+.. click:: FBAdLibrarian.cli
+   :prog: fbal
+   :show-nested:
+
+.. click:: module:parser
+   :prog: hello-world
+   :show-nested:
