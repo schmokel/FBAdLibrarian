@@ -10,7 +10,7 @@ Welcome to FBAdLibrarian's documentation!
    :maxdepth: 3
    :caption: Contents:
 
-   included_modules
+   FBAdLibrarian
 
 
 
