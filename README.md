@@ -1,8 +1,10 @@
 # FBAdLibrarian - a helpful librarian for Facebook Ad Library 
 
 The FBAdLibrarian is a simple, command line tool that collects images from unique hyperlinks offered by Facebook’s Ad Library API.
+
 At the time of writing, Facebook permits the downloading of images associated with individual ads for research purposes (Facebook, n.d.). 
 The Librarian assists researchers who have verified their identity with Facebook in this process. 
+
 First, the Librarian takes the output of the API and prepares a url for each ad. Then, the Librarian looks up each ad individually. 
 If the ad includes an image, the Librarian saves the image to an output folder and names the image according to the post’s unique ad identification number (or “adlib_id”). 
 If the ad includes an embedded video, the Librarian will pass over the ad, but it will document the adlib_id as a video in an accompanying .txt file. 
