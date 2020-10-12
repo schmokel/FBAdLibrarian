@@ -7,31 +7,24 @@ Created on Sun Apr 12 15:16:29 2020
 from selenium import webdriver
 import requests
 from datetime import datetime
-import chromedriver_autoinstaller
+#import chromedriver_autoinstaller
 
+from webdriver_manager.chrome import ChromeDriverManager
 import facebookScraper.helpers as helpers
 
 
 def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):
-             
-        #installing chrome-webdriver
-    try:
-        chromedriver_autoinstaller.install()
-        print("Installing chrome webdriver")
-    except Exception:
-        print("Installing chrome webdriver failed")
-    else:
-        print("Succesfully installed chrome webdriver")
-    
+
     
     #load ad_id_list
     adlib_id_list = helpers.load_txt_to_list(str(adid_filename))
     
     url_list = helpers.load_txt_to_list(str(url_filename))
     url_list = helpers.clean_url(url_list, facebookAccesToken)
-    
-    
-    wd = webdriver.Chrome()
+
+ 
+    wd = webdriver.Chrome(ChromeDriverManager().install())
+
     #DRIVER_PATH = os.path.abspath('.') + r"/chromedriver.exe"
     #wd = webdriver.Chrome(executable_path=DRIVER_PATH)
     api_block_string = "Blocked from Searching or Viewing the Ad Library"

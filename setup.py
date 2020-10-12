@@ -15,8 +15,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="FBAdLibrarian", 
-    version="0.1.4",
+    name="fbadlibrarian", 
+    version="0.1.5",
     author="Rasmus Schmøkel",
     author_email="rasmusschmokel@gmail.com",
     description="A helpful librarian for the Facebook AdLibrary",

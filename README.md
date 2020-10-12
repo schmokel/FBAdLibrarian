@@ -6,7 +6,7 @@ At the time of writing, Facebook permits the downloading of images associated wi
 The Librarian assists researchers who have verified their identity with Facebook in this process. 
 
 First, the Librarian takes the output of the API and prepares a url for each ad. Then, the Librarian looks up each ad individually. 
-If the ad includes an image, the Librarian saves the image to an output folder and names the image according to the post’s unique ad identification number (or “adlib_id”). 
+If the ad includes an image, the Librarian saves the image to an output folder and names the image according to the post’s unique ad identification number (or "adlib_id"). 
 If the ad includes an embedded video, the Librarian will pass over the ad, but it will document the adlib_id as a video in an accompanying .txt file. 
 This allows researchers to see the proportion of images to videos in their data, as well as retrieve videos manually if desired. 
 
@@ -15,7 +15,7 @@ This allows researchers to see the proportion of images to videos in their data,
 ## Prerequisites
 * Python 3 (Is tested on 3.7 but might work on other versions)
 * Access to Facebook Ad Library 
-* Output data from Facebook Ad Library in csv format with semi-colon seperator (other formats and seperators are not supported as of now)  
+* Output data from Facebook Ad Library in xlsx format with semi-colon seperator (other formats and seperators are not supported as of now)  
 
 
 ## Installation
@@ -50,7 +50,7 @@ cd "[your individual folder structure]/FBALproject"
 
 First, initialiaze the project. This command will setup the librarians environment with necessary folders and files
 ```bash
-FBAL init "name-and-path-to-csv-file-from-fb-ad-library"
+FBAL init "name-and-path-to-data-file-from-fb-ad-library"
 ```
 The FbAdLibrarian are creating the necessary files and folder. 
 In the credentials-file insert your Facebook Ad Library token.

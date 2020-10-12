@@ -4,6 +4,6 @@ DateTime>=4.3
 Pillow>=7.2.0
 requests>=2.24.0
 selenium>=3.141.0
-chromedriver_autoinstaller
+webdriver_manager
 xlrd>=1.2.0
 

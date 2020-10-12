@@ -35,7 +35,7 @@ release = '0.1.4'
 # ones.
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode",
             "sphinx.ext.intersphinx", "sphinx.ext.ifconfig",
-            "sphinx.ext.napoleon", "recommonmark", 'sphinx_markdown_builder'
+            "sphinx.ext.napoleon", "recommonmark"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
