@@ -65,7 +65,7 @@ The program is now running and you should see the fetched images in the output-f
 If the librarian stops for whatever reason, fix the issue (e.g. if your token is expired) and simply type the 'FBAL start'-command again and the librarian will restart where it left off.
 
 
-For futher help see the [documentation](docs/build/html/index.html)  
+For futher help see the [documentation](https://fbadlibrarian.readthedocs.io/en/latest/index.html)  
 
 
 
