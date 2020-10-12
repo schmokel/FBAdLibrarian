@@ -1,8 +1,9 @@
-click
-pandas
-datetime
-Pillow
-requests
-selenium
+click==7.1.2
+pandas>=1.0.5
+DateTime>=4.3
+Pillow>=7.2.0
+requests>=2.24.0
+selenium>=3.141.0
 chromedriver_autoinstaller
-xlrd
+xlrd>=1.2.0
+
