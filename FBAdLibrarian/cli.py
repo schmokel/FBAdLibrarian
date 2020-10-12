@@ -15,14 +15,21 @@ import FBAdLibrarian.scraper as sp
 
 @click.group()
 def main():
-    """A sample main documentation."""
+    """FBAL is the main command for using the FBAdLibrarian. It has two subcommands attached to it."""
     pass
    
 
 @main.command()
 @click.argument('datafile')
 def init(datafile):
-    """A sample init documentation."""
+    """A command to initiate your FBAdLibrarian project
+
+    Paramters
+    ---------
+    datafile: xlsx
+        Should be output data from the Facebook Ad Library
+    
+    """
     #creating project structure
     folders = ['temp', 'output']
     
