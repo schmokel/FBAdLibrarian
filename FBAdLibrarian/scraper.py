@@ -10,7 +10,7 @@ from datetime import datetime
 #import chromedriver_autoinstaller
 
 from webdriver_manager.chrome import ChromeDriverManager
-import facebookScraper.helpers as helpers
+import FBAdLibrarian.helpers as helpers
 
 
 def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):

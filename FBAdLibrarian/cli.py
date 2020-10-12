@@ -9,7 +9,7 @@ import pandas as pd
 from datetime import datetime
 import os
 import re
-import facebookScraper.scraper as sp
+import FBAdLibrarian.scraper as sp
 #from colorama import Fore, Back, Style
 
 
