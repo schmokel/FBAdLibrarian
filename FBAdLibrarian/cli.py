@@ -9,7 +9,7 @@ import pandas as pd
 from datetime import datetime
 import os
 import re
-import FBAdLibrarian.scraper as sp
+import FBAdLibrarian.downloader as dl
 #from colorama import Fore, Back, Style
 
 
@@ -89,7 +89,7 @@ def init(datafile):
 
 @main.command()
 def start():
-    """A sample start documentation."""
+    """A start documentation."""
     folder = 'temp/'
     files = os.listdir(folder)
 
@@ -105,7 +105,7 @@ def start():
     with open("facebookAccessToken.txt", "r") as reader:
         facebookAccesToken = reader.read()
         
-    sp.adImageScraper(url_filename = folder + url_file,
+    dl.adImageDownloader(url_filename = folder + url_file,
                       adid_filename = folder + adid_file,
                       facebookAccesToken = facebookAccesToken,
                       outputDir = 'output')

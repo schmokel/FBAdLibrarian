@@ -13,7 +13,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import FBAdLibrarian.helpers as helpers
 
 
-def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):
+def adImageDownloader(url_filename, adid_filename, facebookAccesToken, outputDir):
 
     
     #load ad_id_list
@@ -36,7 +36,7 @@ def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):
     #url_list
     #adlib_id_list
     if len(url_list) == 0:
-        print("All images has been scraped")
+        print("All images has been downloaded")
     if len(url_list) == len(adlib_id_list):
     
 
@@ -44,7 +44,7 @@ def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):
         counter_max = len(url_list)
         counter = 0
         
-        #copying lists to delete already scraped entries
+        #copying lists to delete already downloaded entries
         url_list_out = list(url_list)
         adid_list_out = list(adlib_id_list)
         
@@ -119,9 +119,9 @@ def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):
 
             
             
-                #deleting this entry from a copy of the lists
+                #deleting current entry from a copy of the lists
 
-                url_list_out, adid_list_out = helpers.delete_scraped_element(
+                url_list_out, adid_list_out = helpers.delete_downloaded_element(
                     url_list_out = url_list_out,
                     adid_list_out = adid_list_out, 
                     n = n)
@@ -130,7 +130,7 @@ def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):
                 link = url_list[n]
                 adid = adlib_id_list[n]
                 
-                
+                writing metadata
                 with open("metadata.txt", 'a') as appender:
                     appender.write('\n')
                     for item in [link, adid, content_type]:
@@ -165,3 +165,6 @@ def adImageScraper(url_filename, adid_filename, facebookAccesToken, outputDir):
         print("Length of ad ID's is not equal to length of ad Url's")
 
 
+
+def adVideoDownloader():
+    NotImplementedError

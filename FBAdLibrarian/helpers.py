@@ -11,7 +11,7 @@ from PIL import Image
 import io
 import requests
 
-def delete_scraped_element(url_list_out, adid_list_out, n):
+def delete_downloaded_element(url_list_out, adid_list_out, n):
     del url_list_out[n]
     del adid_list_out[n]
     return url_list_out, adid_list_out
