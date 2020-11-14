@@ -12,17 +12,14 @@ class AdLib:
 
     
 
-    def __init__(self, access_token):
-        self.version = 9.0
+    def __init__(self, access_token, version = "v9.0"):
+        self.version = version
         self.access_token = access_token
         self.base_url = "https://graph.facebook.com/{version}/ads_archive?access_token={access_token}".format(version = self.version, access_token = self.access_token)
-        self.request_headers = []
+        self.fields = self.get_fields()
+        self.request_headers = {}
         self.request_url = None
 
-        self.api_parameters = ["ad_active_status", "ad_delivery_date_min", "ad_delivery_date_max",
-        "ad_reached_countries", "ad_type", "bylines", "delivery_by_region",
-        "potential_reach_min", "potential_reach_max", "publisher_platforms", "search_page_ids", "search_terms"]
-        
 
     def add_parameters(self, **kwargs):
         """
@@ -39,8 +36,10 @@ class AdLib:
 
 
         """
-        
-        self.request_headers += ["&{key}={value}".format(key = str(key), value = str(value)) for key, value in kwargs.items()]
+        kwargs.update(fields = self.get_fields())
+        self.request_headers = kwargs
+        #self.request_headers += ["&{key}={value}".format(key = str(key), value = str(value)) for key, value in kwargs.items()]
+
 
 
     def _query_builder(self):
@@ -50,7 +49,21 @@ class AdLib:
         """request and get the response. 
         Remember to add parameters first using the add_parameters method
         """
-        return requests.get(self._query_builder())
+        
+        response = requests.get(self.base_url, params = self.request_headers).json()
+        data = response['data']
+
+        while 'paging' in response:
+            response = requests.get(response['paging']['next']).json()
+            data += response['data']
+
+        return data
+
+
+    def response(self):
+        return requests.get(self.base_url, params = self.request_headers)
+
+        #return requests.get(self.base_url, params = self.request_headers)
 
     def get_longlived_token(self, app_id, app_secret, access_token):
         """
@@ -70,3 +83,9 @@ class AdLib:
         "inspect the HTTP URL before requesting"
         return self._query_builder()
 
+    def get_fields(self):
+        return ("id,ad_creation_time,ad_creative_body,ad_creative_link_caption"
+        + ",ad_creative_link_description,ad_creative_link_title,ad_delivery_start_time,ad_delivery_stop_time"
+        + ",ad_snapshot_url,currency,demographic_distribution,funding_entity,impressions"
+        + ",page_id,page_name,potential_reach,publisher_platforms,region_distribution,spend"
+        )
