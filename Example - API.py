@@ -4,7 +4,7 @@
 from FBAdLibrarian import api
 import pandas as pd
 
-ads = api.AdLib("insert-access-token")
+ads = api.AdLib("Insert-access-token")
 
 
 #add parameters for your search
@@ -22,3 +22,5 @@ df2 = pd.DataFrame(df)
 
 # for the full response
 response = ads.response()
+
+#%%
