@@ -1,5 +1,6 @@
 
 import requests
+import json
 
 #https://developers.facebook.com/docs/marketing-api/reference/ads_archive/
 #https://developers.facebook.com/docs/apps/features-reference#reference-PAGES_ACCESSS
@@ -9,7 +10,6 @@ import requests
 #https://facebookresearch.github.io/Radlibrary/articles/Radlibrary.html
 
 class AdLib:
-
     
 
     def __init__(self, access_token, version = "v9.0"):
@@ -50,21 +50,31 @@ class AdLib:
         Remember to add parameters first using the add_parameters method
         """
         
-        response = requests.get(self.base_url, params = self.request_headers).json()
-        data = response['data']
+        response = requests.get(self.base_url, params = self.request_headers)
+        
+        if response.status_code == 200:
+            data = response.json()['data']
 
-        while 'paging' in response:
-            response = requests.get(response['paging']['next']).json()
-            data += response['data']
+            while 'paging' in response:
+                response = requests.get(response['paging']['next']).json()
+                data += response['data']
 
-        return data
+            return data
+        
+        else:
+            try:
+                raise ValueError("Status code {}: {}. {}".format(response.status_code, 
+            json.loads(response.text)['error']['error_user_title'],
+            json.loads(response.text)['error']['error_user_msg']))
+            except:
+                raise ValueError(json.loads(response.text)['error']['message'])
 
 
     def response(self):
+        
         return requests.get(self.base_url, params = self.request_headers)
 
-        #return requests.get(self.base_url, params = self.request_headers)
-
+ 
     def get_longlived_token(self, app_id, app_secret, access_token):
         """
         Access token that lasts for 60 days
