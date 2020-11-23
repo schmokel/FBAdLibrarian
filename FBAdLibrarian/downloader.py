@@ -130,7 +130,7 @@ def adImageDownloader(url_filename, adid_filename, facebookAccesToken, outputDir
                 link = url_list[n]
                 adid = adlib_id_list[n]
                 
-                writing metadata
+                #writing metadata
                 with open("metadata.txt", 'a') as appender:
                     appender.write('\n')
                     for item in [link, adid, content_type]:
