@@ -16,7 +16,7 @@ The Librarian works as follows. First, the Librarian takes the ad_snapshot_url o
 ## Installation
 In order to install FBAdLibrarian you can either build from source or install via pip from the wheel distributable
 
-In terminal/CMD:
+In terminal/CMD being in the FbAdLibrarian-folder:
 
 If installing from wheel-file:
 ```bash
