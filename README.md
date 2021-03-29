@@ -20,7 +20,7 @@ In terminal/CMD being in the FbAdLibrarian-folder:
 
 If installing from wheel-file:
 ```bash
-pip install "dist/FBAdLibrarian-0.1.4-py3-none-any.whl"
+pip install "dist/fbadlibrarian-0.1.6-py3-none-any.whl"
 ```
 
 If building from source:
