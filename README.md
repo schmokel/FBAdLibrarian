@@ -49,7 +49,9 @@ First, initialiaze the project. This command will setup the librarians environme
 FBAL init "name-and-path-to-data-file-from-fb-ad-library"
 ```
 The FBAdLibrarian creates the necessary files and folder. 
+
 In the credentials-file insert your Facebook Ad Library tokens.
+
 You are now all set to archive images for research.
 
 Now, still in the project folder simply start the librarian:
