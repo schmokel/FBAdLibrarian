@@ -16,11 +16,11 @@ The Librarian works as follows. First, the Librarian takes the ad_snapshot_url o
 ## Installation
 In order to install FBAdLibrarian you can either build from source or install via pip from the wheel distributable
 
-In terminal/CMD:
+In terminal/CMD being in the FbAdLibrarian-folder:
 
 If installing from wheel-file:
 ```bash
-pip install "dist/FBAdLibrarian-0.1.4-py3-none-any.whl"
+pip install "dist/fbadlibrarian-0.1.6-py3-none-any.whl"
 ```
 
 If building from source:
@@ -49,7 +49,9 @@ First, initialiaze the project. This command will setup the librarians environme
 FBAL init "name-and-path-to-data-file-from-fb-ad-library"
 ```
 The FBAdLibrarian creates the necessary files and folder. 
+
 In the credentials-file insert your Facebook Ad Library tokens.
+
 You are now all set to archive images for research.
 
 Now, still in the project folder simply start the librarian:
