@@ -5,9 +5,9 @@
 FBAdLibrarian
 =============
 
-FBAdLibrarian.scraper module
+FBAdLibrarian.downloader module
 ----------------------------
-.. automodule:: FBAdLibrarian.scraper
+.. automodule:: FBAdLibrarian.downloader
     :members:
     :undoc-members:
     :show-inheritance:
