@@ -6,7 +6,7 @@ FBAdLibrarian
 =============
 
 FBAdLibrarian.downloader module
-----------------------------
+-------------------------------
 .. automodule:: FBAdLibrarian.downloader
     :members:
     :undoc-members:
