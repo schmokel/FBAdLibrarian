@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="fbadlibrarian", 
-    version="0.2.0",
+    version="0.2.1",
     author="Rasmus Schmøkel",
     author_email="rasmusschmokel@gmail.com",
     description="A helpful librarian for the Facebook AdLibrary",
