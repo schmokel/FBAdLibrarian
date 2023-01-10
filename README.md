@@ -6,7 +6,7 @@ At the time of writing, Facebook permits the downloading of individual ad creati
 
 The Librarian works as follows. First, the Librarian takes the ad_snapshot_url of an ad and creates a unique hyperlink, using the researcher's access tokens. Then, the Librarian looks up each ad individually. If the ad includes an image, the Librarian saves the image to an output folder and names the image according to the post’s unique ad identification number (or "adlib_id"). If the ad includes an embedded video, the Librarian will pass over the ad, but it will document the adlib_id as a video in an accompanying "metadata.txt" file. 
 
-To see how it can and have been used see this paper: https://doi.org/10.1080/19331681.2021.1928579
+To see an example of how it can and have been used see this paper: https://doi.org/10.1080/19331681.2021.1928579
 
 
 ## Prerequisites
