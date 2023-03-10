@@ -15,7 +15,6 @@ ads = api.AdLib("fb-access-token-here",
 #                    search_terms = "Biden")
 
 
-
 ads.add_parameters(ad_reached_countries=['US'], search_terms='California', ad_type='POLITICAL_AND_ISSUE_ADS')
 
 #https://graph.facebook.com/<VERSION>/ads_archive?access_token=<ACCESS_TOKEN>&fields=page_id,page_name,ad_snapshot_url&search_terms='california'&ad_type=POLITICAL_AND_ISSUE_ADS&ad_reached_countries=['US']
