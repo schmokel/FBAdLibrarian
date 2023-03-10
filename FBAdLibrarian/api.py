@@ -12,7 +12,7 @@ import json
 class AdLib:
     
 
-    def __init__(self, access_token, version = "v9.0"):
+    def __init__(self, access_token, version = "v16.0"):
         self.version = version
         self.access_token = access_token
         self.base_url = "https://graph.facebook.com/{version}/ads_archive?access_token={access_token}".format(version = self.version, access_token = self.access_token)
@@ -21,11 +21,14 @@ class AdLib:
         self.request_url = None
 
 
-    def add_parameters(self, **kwargs):
+    def add_parameters(self, fields = None, **kwargs):
         """
-        Add parameters for your Ads search.
-        See available fields here: https://developers.facebook.com/docs/marketing-api/reference/ads_archive/
+        fields (str), default None: One str of fields. Each field seperated by comma. See fields here: https://developers.facebook.com/docs/marketing-api/reference/archived-ad/.
+        If none, will infer fields if applieds
+        kwargs:Add parameters for your Ads search.
+            See available fields here: https://developers.facebook.com/docs/marketing-api/reference/ads_archive/
 
+        
         Example
         -------
                 
@@ -36,7 +39,10 @@ class AdLib:
 
 
         """
-        kwargs.update(fields = self.get_fields())
+        if fields is None:
+            fields = self.get_fields()
+            
+        kwargs.update(fields = fields)
         self.request_headers = kwargs
         #self.request_headers += ["&{key}={value}".format(key = str(key), value = str(value)) for key, value in kwargs.items()]
 
@@ -54,10 +60,12 @@ class AdLib:
         
         if response.status_code == 200:
             data = response.json()['data']
-
-            while 'paging' in response:
-                response = requests.get(response['paging']['next']).json()
-                data += response['data']
+            temp_counter = 1
+            while 'paging' in response.json():
+                temp_counter += 1
+                response = requests.get(response.json()['paging']['next'])
+                data += response.json()['data']
+                print("Paging iteration no. %s" % (temp_counter))
 
             return data
         
@@ -93,9 +101,19 @@ class AdLib:
         "inspect the HTTP URL before requesting"
         return self._query_builder()
 
-    def get_fields(self):
-        return ("id,ad_creation_time,ad_creative_body,ad_creative_link_caption"
-        + ",ad_creative_link_description,ad_creative_link_title,ad_delivery_start_time,ad_delivery_stop_time"
-        + ",ad_snapshot_url,currency,demographic_distribution,funding_entity,impressions"
-        + ",page_id,page_name,potential_reach,publisher_platforms,region_distribution,spend"
-        )
+    def get_fields(self, version = None):
+        if version is None:
+            version = self.version
+        
+        if version == "v16.0":
+            return ("id,ad_creation_time,ad_creative_link_captions"
+            + ",ad_creative_link_descriptions,ad_creative_link_titles,ad_delivery_start_time,ad_delivery_stop_time"
+            + ",ad_snapshot_url,currency,demographic_distribution,impressions"
+            + ",page_id,page_name,publisher_platforms,delivery_by_region,spend"
+            )
+        if version == "v9.0)":
+            return ("id,ad_creation_time,ad_creative_body,ad_creative_link_caption"
+            + ",ad_creative_link_description,ad_creative_link_title,ad_delivery_start_time,ad_delivery_stop_time"
+            + ",ad_snapshot_url,currency,demographic_distribution,funding_entity,impressions"
+            + ",page_id,page_name,potential_reach,publisher_platforms,region_distribution,spend"
+            )
